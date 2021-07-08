@@ -1,0 +1,123 @@
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.card {
+  background: white;
+  border-radius: 2rem;
+  max-width: 56rem;
+  min-width: 260px;
+  padding: 2.875rem 1.5rem;
+  background-image: url("/images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: 44% 0%;
+  background-size: 14rem;
+}
+
+.card__image {
+  position: relative;
+  min-width: 25rem;
+}
+
+.card__box {
+  display: none;
+}
+
+#img-mobile {
+  position: absolute;
+  top: -9.4rem;
+  left: 44%;
+  transform: translateX(-50%);
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 15rem;
+}
+
+#img-desktop {
+  display: none;
+}
+
+.card__text {
+  padding: 7rem;
+}
+
+.accordion__item {
+  padding-top: 1rem;
+  border-bottom: 1px solid $light-grayish-blue;
+}
+
+.accordion__item h2 {
+  margin-bottom: 0;
+}
+
+.accordion__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: left;
+  border: none;
+  background: transparent;
+  padding: 0.2rem;
+  font-size: 0.9rem;
+  font-family: "Kumbh Sans", sans-serif;
+  color: $dark-blue;
+}
+
+.accordion__question.open {
+  font-weight: 700;
+}
+
+.accordion__question::after {
+  content: "";
+  display: block;
+  width: 0.625rem;
+  height: 1rem;
+  border: none;
+  background-image: url(/images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  transition: transform 300ms ease-in-out;
+}
+.accordion__question:focus,
+.accordion_question:focus-visible {
+  border: none;
+  outline: dashed 1px rgba($dark-blue, 0.25);
+}
+
+.accordion__question:hover:not(.open) {
+  color: rgb(255, 123, 0);
+}
+
+.accordion__question.open::after {
+  transform: rotate(180deg);
+}
+
+.accordion__content {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  padding-bottom: 1rem;
+}
+
+.acordion.collapse {
+  transition: height 300ms ease;
+}
+
+.accordion__collapse.collapse {
+  display: none;
+}
+
+.accordion__collapse.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 300ms ease;
+}
+
+.accordion__collapse.open {
+  display: block;
+}

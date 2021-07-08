@@ -1,0 +1,48 @@
+@media (min-width: 56em) {
+  body {
+    padding: 5rem;
+  }
+
+  .card {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    padding: 4.375rem 6.25rem 4.375rem 0;
+    background-image: url("/images/bg-pattern-desktop.svg");
+    background-size: 25rem;
+    background-position: -13% center;
+  }
+
+  .card__box {
+    display: block;
+    position: absolute;
+    top: 57%;
+    left: 0;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+    max-width: 137px;
+  }
+
+  .card__image,
+  .card__text {
+    flex: 1;
+  }
+
+  .card__image {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  #img-desktop {
+    max-width: 25rem;
+    transform: translateX(-4rem);
+    display: block;
+  }
+  #img-mobile {
+    display: none;
+  }
+  .card__text {
+    padding: 0;
+  }
+}
